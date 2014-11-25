@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Online</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"><%= render 'layouts/menu' %></nav>
+	<!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide"><%= render 'layouts/slider' %></header>
+	<div class="content container"><%= yield %></div>
+	<footer></footer>
+</body>
+</html>

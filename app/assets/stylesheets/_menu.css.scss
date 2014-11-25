@@ -1,0 +1,48 @@
+@import '_color';
+nav.navbar{
+	a{
+	    text-decoration: none;
+	}
+	ul.drop{
+		list-style:none;
+		margin:0px;
+		padding:0px;
+		//border:1px solid #f1f1f1;
+		li,li a{
+			border-bottom:1px solid #fbfbfb;
+			eight:32px;
+			line-height:32px;
+			padding-left:5px;
+			position:relative;
+			display: block;
+			text-decoration: none;
+			color: darkblue;
+		}
+		li{
+			background-color: $bg-menu;
+			ul.drop{
+				width:200px;
+				position:absolute;
+				top:0px;
+				left: 160px;
+				display: none;
+				z-index: 1000;
+			}
+		}
+		li:hover{
+			> ul.drop{
+				display:block;
+			}
+			> ul.drop:hover{
+				display: block;
+			}
+		}
+	}
+
+	ul.drop li:hover,ul.drop li a:hover{
+		display:block;
+		background:#fbfbfb;
+	    color: red;
+	}
+}
+

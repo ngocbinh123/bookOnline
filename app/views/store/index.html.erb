@@ -1,0 +1,23 @@
+<%	if notice %>
+	<p id="notice"><%= notice %></p>
+<% end %>
+<div class="mTitlePage"><h1>Your Pramatic Catalog</h1></div>
+<div class="mEntryList">
+	<% @products.each do |product| %>
+		<div class="entry row">
+			<div class="mLeft"><%= image_tag(product.image_url) %></div>
+			<div class="mRight">
+				<h3 class="mTitle"><%= product.title %></h3>
+				<div class="mDescription"><%= sanitize(product.description)%></div>
+				<div class="price_line">
+					<table>
+						<tr>
+							<td><span class="price"><%= number_to_currency(product.price) %></span></td>
+							<td><%= button_to 'Add To Cart', line_items_path(product_id: product),:class =>"btn btn-default"%></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>

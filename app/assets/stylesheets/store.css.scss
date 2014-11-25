@@ -1,0 +1,38 @@
+// Place all the styles related to the Store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mEntryList{
+	.entry{
+		display: table;
+		margin-bottom: 20px;
+		.mLeft, .mRight{
+			display: table-cell;
+			vertical-align: top;
+		}
+		.mRight{
+			padding:0 15px;
+			h3{
+				margin-top:0; 
+			}
+			.price_line{
+				padding: 10px 0;
+				table{
+					tr{
+						td{
+							padding-right: 20px;
+						}
+					}
+				}
+				.price{
+					direction: bold;
+					font-size: 20px;
+					font-weight: bold;
+				}
+			}
+		}
+		.mDescription{
+			text-align: justify;
+		}
+	}
+}
